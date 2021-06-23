@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  position: absolute;
+  width: 1440px;
+  height: 800px;
+}
+
+.card {
+  display: flex;
+  flow-direction: row;
+  width: 1110px;
+  height: 446px;
+  position: absolute;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 10px;
+  left: 165px;
+  top: 177px;
+}
+
+.card-left {
+  width: 540px;
+  padding: 78px 90px 65px 70px;
+}
+
+.card-right {
+  padding: 0px;
+  width: 540px;
+  border-radius: 0px 10px 10px 0px;
+  float: right;
+}
+
+.overlay-img {
+  width: 540px;
+  height: 446px;
+  overflow: hidden;
+  background: linear-gradient(hsl(277, 64%, 61%, 0.8), hsl(277, 64%, 61%, 0.8)),
+    url(../images/image-header-desktop.jpg);
+  -webkit-filter: brightness(0.95) saturate(55%) contrast(300%) hue-rotate(2deg)
+    grayscale(15%) sepia(20%);
+  filter: brightness(0.95) saturate(55%) contrast(300%) hue-rotate(2deg)
+    grayscale(15%) sepia(20%);
+  border-radius: 0px 10px 10px 0px;
+}
+
+.card-left-row-2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.card-left-row-1 {
+  width: 380px;
+  height: 242px;
+}
+
+.main-text {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.heading {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: hsl(0, 0%, 100%);
+  margin: 0px 0px 30px 0px;
+}
+
+.heading > a {
+  color: hsl(277, 64%, 61%);
+}
+
+.stat-column {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 60px 0px 0px;
+}
+
+.stat-text {
+  font-family: Lexend Deca;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.stat-num {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: hsl(0, 0%, 100%);
+  margin: 0px 0px 10px 0px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
