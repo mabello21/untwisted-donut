@@ -28,12 +28,9 @@ Users should be able to:
 ### Screenshot
 You can see it here:
 
-../design/Desktop-design-@mabello21.jpg
+../design/    .jpg
 
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -49,26 +46,11 @@ You can see it here:
 Using of Flexbox and Grid properties
 
 
-.flexbox-container {
-	display: flex;
-	flow-direction: row/column/reverse;
-	...
-	}
-	
-.grid-container {
-	display: grid;
-	grid-template-columns: auto auto auto; //for 3 columns grid
-	}
-
-
 ### Continued development
 
-In future, I'd like to keep learning about flexbox and grid. So I could refine my projects.
+In future, need much learning and practice to implement media query for responsive view.
 
 ### Useful resources
-
-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
-- https://css-tricks.com/snippets/css/complete-guide-grid/ - This helped me to understand using flexbox and grid. I'd like to learn it more.
 
 
 ## Author
