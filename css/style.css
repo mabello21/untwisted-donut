@@ -2,39 +2,29 @@
 
 body {
   background-color: hsl(233, 47%, 7%);
-  position: absolute;
-  width: 1440px;
-  height: 800px;
 }
 
-.card {
-  display: flex;
-  flow-direction: row;
-  width: 1110px;
-  height: 446px;
-  position: absolute;
-  background-color: hsl(244, 38%, 16%);
-  border-radius: 10px;
-  left: 165px;
-  top: 177px;
+
+.flex-container {
+    display: flex;
+	background-color: hsl(244, 38%, 16%);
+    border-radius: 10px;
+	position: absolute;
 }
 
-.card-left {
-  width: 540px;
-  padding: 78px 90px 65px 70px;
-}
-
-.card-right {
-  padding: 0px;
-  width: 540px;
-  border-radius: 0px 10px 10px 0px;
-  float: right;
-}
-
-.overlay-img {
+/* *********** Desktop View **********/
+@media (max-width: 1440px) {
+.flex-container {
+    flex-direction: row-reverse;
+    width: 1110px;
+    height: 446px;
+    left: 165px;
+    top: 177px;
+  }
+  
+.flex-card .overlay-img {
   width: 540px;
   height: 446px;
-  overflow: hidden;
   background: linear-gradient(hsl(277, 64%, 61%, 0.8), hsl(277, 64%, 61%, 0.8)),
     url(../images/image-header-desktop.jpg);
   -webkit-filter: brightness(0.95) saturate(55%) contrast(300%) hue-rotate(2deg)
@@ -42,62 +32,131 @@ body {
   filter: brightness(0.95) saturate(55%) contrast(300%) hue-rotate(2deg)
     grayscale(15%) sepia(20%);
   border-radius: 0px 10px 10px 0px;
+} 
+
+#left {
+  display: flex;
+  flex-direction: column;
+  margin: 78px 120px 65px 70px;
 }
 
-.card-left-row-2 {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-
-.card-left-row-1 {
-  width: 380px;
-  height: 242px;
-}
-
-.main-text {
-  font-family: Inter;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  color: hsla(0, 0%, 100%, 0.75);
-}
-
-.heading {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 44px;
-  color: hsl(0, 0%, 100%);
-  margin: 0px 0px 30px 0px;
-}
-
-.heading > a {
-  color: hsl(277, 64%, 61%);
+#stat-col{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;  
 }
 
 .stat-column {
-  display: flex;
-  flex-direction: column;
-  padding: 0px 60px 0px 0px;
+  margin: 0px 60px 0px 0px;
+  line-height: 1.6;
+  
 }
 
-.stat-text {
+#heading {
+  font-size: 36px;
+  line-height: 44px;
+  margin: 0px 0px 30px 0px;
+}
+ 
+#main-text {
+	padding-bottom: 70px;
+}
+}
+/* *********** Desktop View **********/
+
+#main-text {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+#heading {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+}
+
+#heading > a {
+  color: hsl(277, 64%, 61%);
+}
+
+.stat-column > p {
   font-family: Lexend Deca;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 12px;
+  margin: 0px 0px 0px 0px;
   color: hsla(0, 0%, 100%, 0.6);
 }
 
-.stat-num {
+.stat-column > h2 {
   font-family: Inter;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   color: hsl(0, 0%, 100%);
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 0px 0px;
 }
+
+/* ********** Mobile Phone ********** */
+@media (max-width: 400px) {
+.flex-container {
+    flex-direction: column;
+    width: 327px;
+    height: 780px;
+	position: absolute;
+	left: 24px;
+	top: 88px;
+  }
+  
+.flex-card .overlay-img {
+  width: 327px;
+  height: 240px;
+  background: linear-gradient(hsl(277, 64%, 61%, 0.8), hsl(277, 64%, 61%, 0.8)),
+    url(../images/image-header-mobile.jpg);
+	background-size: cover;
+  -webkit-filter: brightness(0.95) saturate(55%) contrast(300%) hue-rotate(2deg)
+    grayscale(15%) sepia(20%);
+  filter: brightness(0.95) saturate(55%) contrast(300%) hue-rotate(2deg)
+    grayscale(15%) sepia(20%);
+  border-radius: 10px 10px 0px 0px;
+} 
+
+#heading {
+	font-size: 28px;
+	text-align: center;
+	line-height: 1.2;
+	margin: 0px 0px 20px 0px;
+}
+
+#main-text {
+	text-align: center;
+	padding-bottom: 35px;
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 33px 40px 33px;
+}
+
+#stat-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-column {
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+}
+/* ********** Mobile Phone ********** */
 
 .attribution {
   font-size: 11px;
